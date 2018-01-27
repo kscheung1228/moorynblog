@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div class='col-sm-6 col-sm-offset-3'>
+<!-- {{ block.super }} -->
+<h1> {{ formtype }} Form !</h1>
+<h1>Form</h1>
+<form method='POST' action=''  enctype='multipart/form-data'>{% csrf_token %}
+{{ form.as_p }}
+<input type='submit' value='{{ formtype }} Post' />
+</form>
+{% endblock content %}
